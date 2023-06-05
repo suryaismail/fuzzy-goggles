@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Logging username when login fails"
 date:   2023-06-05 23:33:54 +0800
 categories: spring security
