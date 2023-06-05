@@ -32,10 +32,10 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 # Build settings
-remote-theme: midnight
+#theme: minima
+theme: jekyll-theme-cayman
 plugins:
   - jekyll-feed
-  - jekyll-remote-theme 
 
 # Exclude from processing.
 # The following items will not be processed, by default.
