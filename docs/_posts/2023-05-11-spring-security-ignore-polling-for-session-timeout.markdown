@@ -12,7 +12,7 @@ so the session is never timed out.
 One approach to fix this is to identify the ajax poll calls, and don't update the last request time.
 
 In the application.yaml, configure the session timeout
-{% highlight %}
+{% highlight yaml%}
 server:
   servlet:
     session:
@@ -47,7 +47,7 @@ public class SecurityConfig {
 
 In the session registry, identify ajax calls, then return without updating the last request time.
 
-{% highlight %}
+{% highlight javascript %}
 <p:poll interval="5" ... update="poll_ui_element"/>
 {% endhighlight %}
 
