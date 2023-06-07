@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Enforcing single session"
+title:  "Ignore polling for session timeout"
 date:   2023-05-11 00:00:00 +0800
 categories: spring security
 ---
