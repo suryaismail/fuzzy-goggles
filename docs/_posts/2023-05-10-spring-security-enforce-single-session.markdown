@@ -11,16 +11,27 @@ a new session is created for each one. Spring security does not prevent multiple
 To get this behaviour, we overwrite the SessionRegistryImpl. First register the 
 custom session registry in the security configuration.
 
-In the security configuration
+In the security configuration, register the custom session registry
 {% highlight java %}
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
 ...
+
+  @Bean
+  public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+    ...
+    http.sessionManagement(
+        sm -> sm
+        .sessionRegistry(getSessionRegistry())
+    ...
+  }
+
   @Bean
   public SessionRegistry getSessionRegistry() {
     return new CustomSessionRegistryImpl();
   }
+  
 }
 {% endhighlight %}
 
